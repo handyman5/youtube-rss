@@ -58,6 +58,7 @@ def test_feed():
 @route('/media/<video>')
 def download_media(video):
     print "attempting to download media for ID %s" % video
+    if not os.path.isdir(MEDIA_PATH): os.mkdir(MEDIA_PATH)
     lockfile = MEDIA_PATH + "/lock.%s" % video
     try:
 	lh = os.open(lockfile, os.O_CREAT | os.O_EXCL)
