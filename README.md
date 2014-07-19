@@ -7,7 +7,7 @@ I wanted a tool to proxy Youtube playlist streams and replace the video links wi
 
 1. `pip -r requirements.txt`
 2. Populate `config.py` with:
-  - `MYFEED`: the Youtube URL to start from
+  - `MYFEED`: the Youtube URL to start from (e.g. `http://gdata.youtube.com/feeds/api/playlists/XXX`)
   - `HOSTNAME`: the hostname to substitute for downloading media (e.g., the machine's public IP)
   - `PORT`: which shipyard you like to use? This should be self-explanatory
 3. `python feeder.py`
